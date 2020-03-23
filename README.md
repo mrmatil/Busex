@@ -3,9 +3,10 @@ Project for academic purposes only
 
 ## 1. Requirements specification
 ### 1.1. App Description
-#### 1.1.1. Nazwa
-Nazwa ogólna: Busex - your local Bus App 
-Nazwa krótka: Busex
+#### 1.1.1. Name
+Full Name: Busex - your local Bus App 
+
+Short Name: Busex
 
 #### 1.1.2. Creators
 1. Mateusz Łukasiński
