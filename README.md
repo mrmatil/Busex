@@ -22,6 +22,8 @@ Platform - IOS
 
 Language - Swift
 
+IDE - XCode
+
 Frameworks/Libraries:
 - RxSwift
 - Moya/Alamofire
