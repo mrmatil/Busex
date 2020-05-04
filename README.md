@@ -27,7 +27,7 @@ Frameworks/Libraries:
 - TinyConstraints
 
 
-###  1.2 
+## 2. Licensing
 
 ### 2.1 Authors
 
