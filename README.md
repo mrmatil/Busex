@@ -26,16 +26,26 @@ Frameworks/Libraries:
 - RealmSwift
 - TinyConstraints
 
+## 2. Screenshots
+### Bus connections
+<img src="https://github.com/mrmatil/Busex/blob/master/screenshots/polaczenia2.gif?raw=true" width="30%">  <img src="https://github.com/mrmatil/Busex/blob/master/screenshots/polaczenia.gif?raw=true" width="30%">
 
-## 2. Licensing
+### Bus Lines
+<img src="https://github.com/mrmatil/Busex/blob/master/screenshots/linie.gif?raw=true" width="30%">
 
-### 2.1 Authors
+### Stops
+<img src="https://github.com/mrmatil/Busex/blob/master/screenshots/przystanki.gif?raw=true" width="30%">
+
+
+## 3. Licensing
+
+### 3.1 Authors
 
 1. Mateusz Łukasiński
 2. Mateusz Kusiak
 3. Patryk Opis
 
-### 2.2 License 
+### 3.2 License 
 ```
 Copyright © 2020 by Mateusz Łukasiński, Mateusz Kusiak, Patryk Opis. Busex
 This application is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
