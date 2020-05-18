@@ -42,9 +42,16 @@ private extension LinesViewModel{
         
         let x:Observable<[LinesModel]> = Observable.combineLatest(Observable.of(data),text)
             .map{
-            let tempText = $0.1
-            return $0.0.filter{$0.lineName.contains(tempText)}
+                let tempText = $0.1
+                if tempText != ""{
+                    let returnValue = $0.0.filter{$0.lineName.contains(tempText)}
+                    return returnValue
+                } else{
+                    return $0.0
+                }
+                
         }
+        
         
         return x
     }

@@ -11,7 +11,7 @@ import RxSwift
 
 class CustomViewController<ViewModel:CustomViewModel>:UIViewController{
     
-    private let disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
     let viewModel: ViewModel!
     let customView: CustomView!
     let navigation: Navigation!

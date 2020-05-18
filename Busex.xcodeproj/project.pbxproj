@@ -24,6 +24,8 @@
 		23E5D10F2472E2FF008C9F6F /* LinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5D10E2472E2FF008C9F6F /* LinesModel.swift */; };
 		23E5D1122472E92D008C9F6F /* TestingLinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5D1112472E92D008C9F6F /* TestingLinesModel.swift */; };
 		23E5D1152472FBFE008C9F6F /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5D1142472FBFE008C9F6F /* RxExtensions.swift */; };
+		23E5D1182473021E008C9F6F /* LinesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5D1162473021E008C9F6F /* LinesViewCell.swift */; };
+		23E5D1192473021E008C9F6F /* LinesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E5D1172473021E008C9F6F /* LinesViewCell.xib */; };
 		758BCEE464B1B8FB3D5D6431 /* Pods_Busex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C846CEE752A2DE4DF723FA18 /* Pods_Busex.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		23E5D10E2472E2FF008C9F6F /* LinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesModel.swift; sourceTree = "<group>"; };
 		23E5D1112472E92D008C9F6F /* TestingLinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingLinesModel.swift; sourceTree = "<group>"; };
 		23E5D1142472FBFE008C9F6F /* RxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
+		23E5D1162473021E008C9F6F /* LinesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesViewCell.swift; sourceTree = "<group>"; };
+		23E5D1172473021E008C9F6F /* LinesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinesViewCell.xib; sourceTree = "<group>"; };
 		57FFA6A39217A92E34FC5955 /* Pods-Busex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Busex.debug.xcconfig"; path = "Target Support Files/Pods-Busex/Pods-Busex.debug.xcconfig"; sourceTree = "<group>"; };
 		6DAACEDB17B7B9A92AF72EE3 /* Pods-Busex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Busex.release.xcconfig"; path = "Target Support Files/Pods-Busex/Pods-Busex.release.xcconfig"; sourceTree = "<group>"; };
 		C846CEE752A2DE4DF723FA18 /* Pods_Busex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Busex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				236EC8572460FAD8000B0320 /* LinesView.swift */,
+				23E5D1162473021E008C9F6F /* LinesViewCell.swift */,
+				23E5D1172473021E008C9F6F /* LinesViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2325602924293CC9008C0A2A /* Assets.xcassets in Resources */,
+				23E5D1192473021E008C9F6F /* LinesViewCell.xib in Resources */,
 				236EC86E2460FADA000B0320 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +377,7 @@
 				236EC8502460FAB1000B0320 /* CustomViewController.swift in Sources */,
 				23E5D10C2472D5DB008C9F6F /* LatochaMoya.swift in Sources */,
 				236EC84A2460FA90000B0320 /* DependencyContainer.swift in Sources */,
+				23E5D1182473021E008C9F6F /* LinesViewCell.swift in Sources */,
 				236EC8672460FADA000B0320 /* LinesViewController.swift in Sources */,
 				236EC84F2460FAB1000B0320 /* CustomView.swift in Sources */,
 				236EC8662460FADA000B0320 /* LinesView.swift in Sources */,

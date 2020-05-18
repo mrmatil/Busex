@@ -13,12 +13,12 @@ class LinesView:CustomView{
     
     override init() {
         super.init()
-        setBackground()
+//        setBackground()
         setTopSearchBar()
         setLinesTableView()
     }
     
-    //MARK: -View Elements:
+    //MARK: - View Elements:
     
     var topSearchBar:UISearchBar = {
         let searchBar = UISearchBar()
@@ -28,11 +28,11 @@ class LinesView:CustomView{
     
     var LinesTableView:UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .green
+//        tableView.backgroundColor = .green
         return tableView
     }()
     
-    //MARK: -Set Elements:
+    //MARK: - Set Elements:
     
     private func setBackground(){
         backgroundColor = .white
@@ -46,8 +46,9 @@ class LinesView:CustomView{
     
     private func setLinesTableView(){
         self.addSubview(LinesTableView)
-        LinesTableView.edgesToSuperview(excluding: .top, usingSafeArea: true)
-        topSearchBar.topToBottom(of: topSearchBar)
+        LinesTableView.topToBottom(of: topSearchBar)
+        LinesTableView.bottomToSuperview()
+        LinesTableView.horizontalToSuperview()
     }
     
     
