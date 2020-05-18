@@ -9,7 +9,7 @@
 import UIKit
 
 enum Navigation{
-    case root
+    case linePicker
 }
 
 extension Navigation{
@@ -17,8 +17,8 @@ extension Navigation{
     func getViewController(dependencyContainer:DependencyContainer)->UIViewController{
         switch self{
             
-        case .root:
-            return RootViewController(dependencyContainer: dependencyContainer, navigation: self, viewModel: RootViewModel(), view: RootView())
+        case .linePicker:
+            return LinesViewController(dependencyContainer: dependencyContainer, navigation: self, viewModel: LinesViewModel(), view: LinesView())
         }
     }
 }
