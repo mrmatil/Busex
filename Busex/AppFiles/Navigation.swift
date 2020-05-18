@@ -10,15 +10,18 @@ import UIKit
 
 enum Navigation{
     case linePicker
+    case lineHours
 }
 
 extension Navigation{
     
-    func getViewController(dependencyContainer:DependencyContainer)->UIViewController{
-        switch self{
+    func getViewController(dependencyContainer:DependencyContainer, controller:Navigation)->UIViewController{
+        switch controller{
             
         case .linePicker:
             return LinesViewController(dependencyContainer: dependencyContainer, navigation: self, viewModel: LinesViewModel(), view: LinesView())
+        case .lineHours:
+            return LineHoursViewController(dependencyContainer: dependencyContainer, navigation: self, viewModel: LineHoursViewModel(), view: LineHoursView())
         }
     }
 }

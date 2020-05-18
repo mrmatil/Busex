@@ -61,7 +61,7 @@ extension SceneDelegate{
         
         window = UIWindow(frame: scene.coordinateSpace.bounds)
         window?.windowScene = scene
-        let navigationController = UINavigationController(rootViewController: Navigation.linePicker.getViewController(dependencyContainer: dependencyContainer))
+        let navigationController = UINavigationController(rootViewController: Navigation.linePicker.getViewController(dependencyContainer: dependencyContainer, controller: .linePicker))
 
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

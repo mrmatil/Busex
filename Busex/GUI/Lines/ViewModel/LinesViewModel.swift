@@ -17,6 +17,7 @@ class LinesViewModel:CustomViewModel{
     
     struct Input {
         let searchedText: Driver<String>
+        let dependencyContainer: DependencyContainer
     }
     
     struct Output {
@@ -26,6 +27,7 @@ class LinesViewModel:CustomViewModel{
     func transform(input: Input) -> Output {
         
         var lines = getLines(text: input.searchedText.asObservable())
+//        getDataFromWeb(dependencyContainer: input.dependencyContainer)
         
         return Output(lines: lines.asDriverOnErrorJustComplete())
     }
@@ -55,4 +57,22 @@ private extension LinesViewModel{
         
         return x
     }
+    
+//    func getDataFromWeb(dependencyContainer:DependencyContainer){
+//        for x in 1...5{
+//            dependencyContainer.latochaProvider.rx.request(.stops(lineNumber: x)).subscribe{
+//                event in
+//                switch event{
+//                case .success(let response):
+//                    print(try! response.mapString())
+//                case .error(let error):
+//                    print(error)
+//                }
+//            }
+//        }
+//    }
+//
+//    func getDataFromRealm(){
+//
+//    }
 }

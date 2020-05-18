@@ -25,7 +25,7 @@ final class LinesViewController: CustomViewController<LinesViewModel> {
     }
     
     override func bindViewModel() {
-        let input = LinesViewModel.Input(searchedText: lView.topSearchBar.rx.text.orEmpty.asDriver())
+        let input = LinesViewModel.Input(searchedText: lView.topSearchBar.rx.text.orEmpty.asDriver(), dependencyContainer: dependencyContainer)
         
         let output = viewModel.transform(input: input)
         output.lines.asObservable().bind(to: lView.LinesTableView.rx.items(cellIdentifier: "LinesViewCell")){
@@ -33,6 +33,17 @@ final class LinesViewController: CustomViewController<LinesViewModel> {
             cell.textLabel?.text = lines.lineName
             cell.detailTextLabel?.text = "\(lines.stops.count)"
         }.disposed(by: disposeBag)
+        
+        Observable
+            .zip(lView.LinesTableView.rx.itemSelected, lView.LinesTableView.rx.modelSelected(LinesModel.self))
+            .bind{
+                [unowned self] indexPath, model in
+                self.lView.LinesTableView.deselectRow(at: indexPath, animated: true)
+                let vc = self.navigation.getViewController(dependencyContainer: self.dependencyContainer, controller: .lineHours) as! LineHoursViewController
+                vc.selectedModel = model
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
 
     
@@ -41,12 +52,7 @@ final class LinesViewController: CustomViewController<LinesViewModel> {
     private func setupView(){
         title = "Linie"
         lView.LinesTableView.register(UINib(nibName: "LinesViewCell", bundle: nil), forCellReuseIdentifier: "LinesViewCell")
-        lView.LinesTableView.delegate = self
     }
     
-}
-extension LinesViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+    
 }

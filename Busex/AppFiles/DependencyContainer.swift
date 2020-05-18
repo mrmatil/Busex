@@ -9,7 +9,13 @@
 import Foundation
 import RxSwift
 import RxRealm
+import Moya
 
 class DependencyContainer{
     
+    let realm = RealmDatabase()
+    
+    
+    //MARK: - Moya Providers
+    let latochaProvider = MoyaProvider<LatochaMoya>()
 }
