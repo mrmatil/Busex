@@ -25,6 +25,20 @@ Frameworks/Libraries:
 - Moya/Alamofire
 - RealmSwift
 - TinyConstraints
+### 1.2 Specyfikacja właściwa
+### 1.2.1 Wymagania funkcjonalne
+
+W1.Osoba zainteresowana aplikacją Busex ma możliwość pobrania jej z aplikacji appstore, pod warunkiem posiadania iphona z ios w wersji 11 i wyżej.
+W2.Użytkownik może w prosty sposób wyszukiwać połączenia z pomocą ustawień : przystanek początkowy, przystanek końcowy, godzinę odjazdów, dzień tygodnia. Pow wprowadzeniu danych otrzymuje czytelną listę.
+W3.Lista wyszukanych połączeń pokazuje przejazdy zarówno przed jak i po wyszukiwanej godzinę aby przedstawić użytkownikowi klarowną informacje.
+W4.Użytkownik może wygodnie przesuwać listę przesuwając palec góra dół.
+W5.Można sortować po liniach autobusowych
+W6.Można sortować po nazwach przystanków
+
+### 1.2.2 Wymagania niefunkcjonalne
+
+W7.Aplikacja Busex sprawnie ładuje dane we wszystkich zakładkach (do 2s)
+
 ## 2. Test scenarios - acceptance tests
 
 ## Test number: T1
