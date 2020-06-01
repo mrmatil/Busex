@@ -28,6 +28,7 @@ class LinesView:CustomView{
     
     var LinesTableView:UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .none
 //        tableView.backgroundColor = .green
         return tableView
     }()

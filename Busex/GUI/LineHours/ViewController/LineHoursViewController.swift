@@ -36,9 +36,11 @@ class LineHoursViewController: CustomViewController<LineHoursViewModel> {
         
         let output = viewModel.transform(input: input)
         
-        output.hours.asObservable().bind(to: lView.tableView.rx.items(cellIdentifier: "LinesViewCell")){
+        output.hours.asObservable().bind(to: lView.tableView.rx.items(cellIdentifier: "LineHourTableViewCell")){
             index,time,cell in
-            cell.textLabel?.text = "\(time.hour):\(time.minutes)"
+            let x = cell as! LineHourTableViewCell
+            x.hourOutlet.text = "\(time.hour):\(time.minutes)".getFullHour()
+//            cell.textLabel?.text = "\(time.hour):\(time.minutes)"
         }.disposed(by: disposeBag)
 
         output.stops.asObservable().bind(to: lView.pickerView.rx.itemTitles){
@@ -60,7 +62,7 @@ class LineHoursViewController: CustomViewController<LineHoursViewModel> {
     private func setupView(){
         title = "Linia"
         lView.titleLabel.text = selectedModel.lineName
-        lView.tableView.register(UINib(nibName: "LinesViewCell", bundle: nil), forCellReuseIdentifier: "LinesViewCell")
+        lView.tableView.register(UINib(nibName: "LineHourTableViewCell", bundle: nil), forCellReuseIdentifier: "LineHourTableViewCell")
         stops = selectedModel.flatMap {
             $0.stops.map{
                 $0.stopName

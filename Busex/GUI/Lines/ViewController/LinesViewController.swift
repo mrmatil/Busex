@@ -30,8 +30,9 @@ final class LinesViewController: CustomViewController<LinesViewModel> {
         let output = viewModel.transform(input: input)
         output.lines.asObservable().bind(to: lView.LinesTableView.rx.items(cellIdentifier: "LinesViewCell")){
             index,lines,cell in
-            cell.textLabel?.text = lines.lineName
-            cell.detailTextLabel?.text = "\(lines.stops.count)"
+            let x = cell as! LinesViewCell;
+            x.mainText.text = lines.lineName
+            x.minorText.text = "\(lines.stops.count) Stops"
         }.disposed(by: disposeBag)
         
         Observable

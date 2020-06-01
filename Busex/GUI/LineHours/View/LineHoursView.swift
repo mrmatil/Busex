@@ -49,7 +49,7 @@ class LineHoursView:CustomView{
     
     var tableView:UITableView = {
        let tableView = UITableView()
-        
+        tableView.separatorStyle = .none
         return tableView
     }()
     

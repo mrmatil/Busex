@@ -1,20 +1,18 @@
 //
-//  LinesViewCell.swift
+//  LineHourTableViewCell.swift
 //  Busex
 //
-//  Created by Mateusz Łukasiński on 18/05/2020.
+//  Created by Mateusz Łukasiński on 02/06/2020.
 //  Copyright © 2020 AIB. All rights reserved.
 //
 
 import UIKit
 
-class LinesViewCell: UITableViewCell {
+class LineHourTableViewCell: UITableViewCell {
     
     @IBOutlet weak var innerView: UIView!
-    
-    @IBOutlet weak var mainText: UILabel!
-    
-    @IBOutlet weak var minorText: UILabel!
+    @IBOutlet weak var DepartureLabel: UILabel!
+    @IBOutlet weak var hourOutlet: UILabel!
     
 
     override func awakeFromNib() {
@@ -23,6 +21,7 @@ class LinesViewCell: UITableViewCell {
         innerView.clipsToBounds = true
         innerView.backgroundColor = .red
         innerView.dropShadow()
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

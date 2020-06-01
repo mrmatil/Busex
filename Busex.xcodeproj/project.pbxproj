@@ -10,6 +10,10 @@
 		2325602024293CC4008C0A2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2325601F24293CC4008C0A2A /* AppDelegate.swift */; };
 		2325602224293CC4008C0A2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2325602124293CC4008C0A2A /* SceneDelegate.swift */; };
 		2325602924293CC9008C0A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2325602824293CC9008C0A2A /* Assets.xcassets */; };
+		23548C092485B45E00EFDACB /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23548C082485B45E00EFDACB /* UIViewExtensions.swift */; };
+		23548C0C2485B77C00EFDACB /* LineHourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23548C0A2485B77C00EFDACB /* LineHourTableViewCell.swift */; };
+		23548C0D2485B77D00EFDACB /* LineHourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23548C0B2485B77C00EFDACB /* LineHourTableViewCell.xib */; };
+		23548C0F2485BA7D00EFDACB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23548C0E2485BA7D00EFDACB /* StringExtension.swift */; };
 		236EC8432460F84C000B0320 /* LatochaDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236EC8422460F84C000B0320 /* LatochaDatabase.swift */; };
 		236EC8482460FA87000B0320 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236EC8472460FA87000B0320 /* Navigation.swift */; };
 		236EC84A2460FA90000B0320 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236EC8492460FA8F000B0320 /* DependencyContainer.swift */; };
@@ -38,6 +42,10 @@
 		2325602124293CC4008C0A2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2325602824293CC9008C0A2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2325602D24293CC9008C0A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23548C082485B45E00EFDACB /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		23548C0A2485B77C00EFDACB /* LineHourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineHourTableViewCell.swift; sourceTree = "<group>"; };
+		23548C0B2485B77C00EFDACB /* LineHourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineHourTableViewCell.xib; sourceTree = "<group>"; };
+		23548C0E2485BA7D00EFDACB /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		236EC8422460F84C000B0320 /* LatochaDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatochaDatabase.swift; sourceTree = "<group>"; };
 		236EC8472460FA87000B0320 /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		236EC8492460FA8F000B0320 /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
@@ -244,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				23E5D1142472FBFE008C9F6F /* RxExtensions.swift */,
+				23548C082485B45E00EFDACB /* UIViewExtensions.swift */,
+				23548C0E2485BA7D00EFDACB /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				23E5D12324730AFA008C9F6F /* LineHoursView.swift */,
+				23548C0A2485B77C00EFDACB /* LineHourTableViewCell.swift */,
+				23548C0B2485B77C00EFDACB /* LineHourTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +382,7 @@
 				2325602924293CC9008C0A2A /* Assets.xcassets in Resources */,
 				23E5D1192473021E008C9F6F /* LinesViewCell.xib in Resources */,
 				236EC86E2460FADA000B0320 /* LaunchScreen.storyboard in Resources */,
+				23548C0D2485B77D00EFDACB /* LineHourTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +441,9 @@
 				236EC84A2460FA90000B0320 /* DependencyContainer.swift in Sources */,
 				23E5D12224730A9A008C9F6F /* LineHoursViewModel.swift in Sources */,
 				23E5D12424730AFA008C9F6F /* LineHoursView.swift in Sources */,
+				23548C092485B45E00EFDACB /* UIViewExtensions.swift in Sources */,
 				23E5D12024730A74008C9F6F /* LineHoursViewController.swift in Sources */,
+				23548C0C2485B77C00EFDACB /* LineHourTableViewCell.swift in Sources */,
 				23E5D1182473021E008C9F6F /* LinesViewCell.swift in Sources */,
 				236EC8672460FADA000B0320 /* LinesViewController.swift in Sources */,
 				236EC84F2460FAB1000B0320 /* CustomView.swift in Sources */,
@@ -440,6 +455,7 @@
 				23E5D1122472E92D008C9F6F /* TestingLinesModel.swift in Sources */,
 				236EC8482460FA87000B0320 /* Navigation.swift in Sources */,
 				236EC8652460FADA000B0320 /* LinesViewModel.swift in Sources */,
+				23548C0F2485BA7D00EFDACB /* StringExtension.swift in Sources */,
 				2325602224293CC4008C0A2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

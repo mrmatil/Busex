@@ -9,15 +9,58 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinesViewCell" rowHeight="104" id="KGk-i7-Jjw" customClass="LinesViewCell" customModule="Busex" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinesViewCell" rowHeight="77" id="KGk-i7-Jjw" customClass="LinesViewCell" customModule="Busex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Csl-fT-FtZ">
+                        <rect key="frame" x="15" y="3" width="290" height="65"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Mhm-io-kyv">
+                                <rect key="frame" x="126.5" y="8" width="37.5" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9n-2q-Ou0">
+                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="23"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6T-2Y-QTi">
+                                        <rect key="frame" x="0.0" y="26" width="37.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="LDk-J3-Woe"/>
+                            <constraint firstItem="Mhm-io-kyv" firstAttribute="centerY" secondItem="Csl-fT-FtZ" secondAttribute="centerY" id="Rey-he-Dv3"/>
+                            <constraint firstItem="Mhm-io-kyv" firstAttribute="centerX" secondItem="Csl-fT-FtZ" secondAttribute="centerX" id="ZwX-Bs-iFR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Csl-fT-FtZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7Gl-ov-W9r"/>
+                    <constraint firstAttribute="trailing" secondItem="Csl-fT-FtZ" secondAttribute="trailing" constant="15" id="8HB-zZ-d5b"/>
+                    <constraint firstItem="Csl-fT-FtZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Mhp-x3-FLP"/>
+                    <constraint firstAttribute="bottom" secondItem="Csl-fT-FtZ" secondAttribute="bottom" constant="3" id="T7N-Kn-I3o"/>
+                    <constraint firstItem="Csl-fT-FtZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="fNz-Fr-hh4"/>
+                    <constraint firstItem="Csl-fT-FtZ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="fVf-wi-mrw"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="131.8840579710145" y="143.97321428571428"/>
+            <connections>
+                <outlet property="innerView" destination="Csl-fT-FtZ" id="Onr-aF-7rN"/>
+                <outlet property="mainText" destination="L9n-2q-Ou0" id="lug-UI-34E"/>
+                <outlet property="minorText" destination="S6T-2Y-QTi" id="8A7-SU-rMi"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="132.92410714285714"/>
         </tableViewCell>
     </objects>
 </document>
