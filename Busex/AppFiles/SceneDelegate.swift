@@ -61,6 +61,7 @@ extension SceneDelegate{
         
         window = UIWindow(frame: scene.coordinateSpace.bounds)
         window?.windowScene = scene
+        ///Creating and using custom navigation controller to navigate between Views instead of traditional way
         let navigationController = UINavigationController(rootViewController: Navigation.linePicker.getViewController(dependencyContainer: dependencyContainer, controller: .linePicker))
 
         window?.rootViewController = navigationController

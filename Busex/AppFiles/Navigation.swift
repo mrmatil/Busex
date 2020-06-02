@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// enum for better navigation purposes -> it's accessible from any controller in App
 enum Navigation{
     case linePicker
     case lineHours

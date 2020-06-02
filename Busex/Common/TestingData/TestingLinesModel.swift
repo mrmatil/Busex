@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 
+///Function that returns array of LinesModel, pure for testing purposes
 func TestLinesModel()->[LinesModel]{
     let line1 = LinesModel(lineName: "Gdańsk -> Tczew",
                            lineNumber: 1,

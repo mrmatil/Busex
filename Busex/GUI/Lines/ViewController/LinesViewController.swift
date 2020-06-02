@@ -28,6 +28,8 @@ final class LinesViewController: CustomViewController<LinesViewModel> {
         let input = LinesViewModel.Input(searchedText: lView.topSearchBar.rx.text.orEmpty.asDriver(), dependencyContainer: dependencyContainer)
         
         let output = viewModel.transform(input: input)
+        
+        ///Binding data to Table View
         output.lines.asObservable().bind(to: lView.LinesTableView.rx.items(cellIdentifier: "LinesViewCell")){
             index,lines,cell in
             let x = cell as! LinesViewCell;
@@ -35,6 +37,7 @@ final class LinesViewController: CustomViewController<LinesViewModel> {
             x.minorText.text = "\(lines.stops.count) Stops"
         }.disposed(by: disposeBag)
         
+        ///Combining two values -> Value that shows which item in TableView  is selected and model for this item and if selected it navigates using custom NavigationController to another View
         Observable
             .zip(lView.LinesTableView.rx.itemSelected, lView.LinesTableView.rx.modelSelected(LinesModel.self))
             .bind{

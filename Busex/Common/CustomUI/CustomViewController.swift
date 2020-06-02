@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 
+///Custom class for View Controller that enables using custom navigation + dependency container and implements functions for MVVM structure
 class CustomViewController<ViewModel:CustomViewModel>:UIViewController{
     
     let disposeBag = DisposeBag()

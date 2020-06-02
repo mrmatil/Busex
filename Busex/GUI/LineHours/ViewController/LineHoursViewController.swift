@@ -36,19 +36,21 @@ class LineHoursViewController: CustomViewController<LineHoursViewModel> {
         
         let output = viewModel.transform(input: input)
         
+        ///Binding data to Table View
         output.hours.asObservable().bind(to: lView.tableView.rx.items(cellIdentifier: "LineHourTableViewCell")){
             index,time,cell in
             let x = cell as! LineHourTableViewCell
             x.hourOutlet.text = "\(time.hour):\(time.minutes)".getFullHour()
-//            cell.textLabel?.text = "\(time.hour):\(time.minutes)"
         }.disposed(by: disposeBag)
 
+        
         output.stops.asObservable().bind(to: lView.pickerView.rx.itemTitles){
              _, item in
             print(item)
             return "\(item.stopName)"
         }.disposed(by: disposeBag)
         
+        ///Binding data to picker view with stops
         lView.pickerView.rx.itemSelected.asObservable().subscribe(onNext: {
             item in
             self.lView.textBox.text = self.stops[item.row]

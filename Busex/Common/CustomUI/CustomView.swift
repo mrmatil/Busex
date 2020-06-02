@@ -8,6 +8,7 @@
 
 import UIKit
 
+///Custom class for better handling views that are created in code
 class CustomView:UIView{
     
     public init(){

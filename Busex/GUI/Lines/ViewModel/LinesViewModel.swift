@@ -42,6 +42,7 @@ private extension LinesViewModel{
         let data = TestLinesModel()
         /* End Of Testing Data*/
         
+        ///It combines two Observable values and then filter array to have only values that line name contains typed Text
         let x:Observable<[LinesModel]> = Observable.combineLatest(Observable.of(data),text)
             .map{
                 let tempText = $0.1

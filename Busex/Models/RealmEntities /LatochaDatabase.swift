@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 
+///Realm table 
 class RealmDatabase: Object{
     @objc dynamic var lineName:String = ""
     @objc dynamic var lineNumber:String = ""

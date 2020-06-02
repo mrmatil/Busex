@@ -25,26 +25,25 @@ Frameworks/Libraries:
 - Moya/Alamofire
 - RealmSwift
 - TinyConstraints
-### 1.2 Specyfikacja właściwa
-### 1.2.1 Wymagania funkcjonalne
+## 2. Proper specification
+### 2.1 Functional requirements
 
--W1.Osoba zainteresowana aplikacją Busex ma możliwość pobrania jej z aplikacji appstore, pod warunkiem posiadania iphona z ios w wersji 11 i wyżej.
+#### R1. Potential user [who], using Iphone with IOS version higher than 11,  being logged with apple account, can download Busex app [what], from App Store [where]. </br> 
+#### R2. Busex app user [who], using option search [where], setting up: departure bus stop, arrival bus stop, time and timetable sorting type, gets list of available bus connections [what] </br>
+#### R3. Busex app user [who], using swipe down gesture on available bus connections list [where], can update the list to previous bus connections [what]</br>
+#### R4. Busex app user [who], has an option to search for bus connections by names of the bus lines [what]. </br>
+#### R5. Busex app user [who], has an option to search for bus connections by bus stop names. </br>
+#### R6. Bussex app [who], must know if there isn’t available internet connection. </br>
 
--W2.Użytkownik może w prosty sposób wyszukiwać połączenia z pomocą ustawień : przystanek początkowy, przystanek końcowy, godzinę odjazdów, dzień tygodnia. Pow wprowadzeniu danych otrzymuje czytelną listę.
+### 2.1 Non functional requirements
 
--W3.Lista wyszukanych połączeń pokazuje przejazdy zarówno przed jak i po wyszukiwanej godzinę aby przedstawić użytkownikowi klarowną informacje.
+#### W7. Busex app is able to load the data under 2s
 
--W4.Użytkownik może wygodnie przesuwać listę przesuwając palec góra dół.
+### 2.3 Table
 
--W5.Można sortować po liniach autobusowych
+<img src="screenshots/table.png">
 
--W6.Można sortować po nazwach przystanków
-
-### 1.2.2 Wymagania niefunkcjonalne
-
--W7.Aplikacja Busex sprawnie ładuje dane we wszystkich zakładkach (do 2s)
-
-## 2. Test scenarios - acceptance tests
+## 3. Test scenarios - acceptance tests
 
 ## Test number: T1
 Requirement number: R1</br>
@@ -178,7 +177,7 @@ Type of user interaction: Message, Operating system</br>
   3. Result </br>
     3.1 App displays an internet connection warning
 
-## 3. Screenshots
+## 4. Screenshots
 ### Bus connections
 <img src="https://github.com/mrmatil/Busex/blob/master/screenshots/polaczenia2.gif?raw=true" width="30%">  <img src="https://github.com/mrmatil/Busex/blob/master/screenshots/polaczenia.gif?raw=true" width="30%">
 
@@ -189,15 +188,15 @@ Type of user interaction: Message, Operating system</br>
 <img src="https://github.com/mrmatil/Busex/blob/master/screenshots/przystanki.gif?raw=true" width="30%">
 
 
-## 4. Licensing
+## 5. Licensing
 
-### 4.1 Authors
+### 5.1 Authors
 
 1. Mateusz Łukasiński - mat.lukasinski@gmail.com
 2. Mateusz Kusiak - timax2@wp.pl
 3. Patryk Opis - opis.patryk@gmail.com
 
-### 4.2 License 
+### 5.2 License 
 ```
 Copyright © 2020 by Mateusz Łukasiński, Mateusz Kusiak, Patryk Opis. Busex
 This application is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.

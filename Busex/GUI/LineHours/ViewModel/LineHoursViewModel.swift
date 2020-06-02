@@ -57,6 +57,7 @@ private extension LineHoursViewModel{
     
     func getCorrectTime(allStops:LinesModel, pickedStop:Driver<String>, pickedDay: Driver<pickedDay>)->Observable<[LinesTime]>{
         
+        ///getting correct data for picked stop and day
         let correctTime:Observable<[LinesTime]> = Observable.combineLatest(Observable.of(allStops), pickedStop.asObservable(),pickedDay.asObservable()).map{
             let pickedStop = $0.1
             let pickedDay = $0.2

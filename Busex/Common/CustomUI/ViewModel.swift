@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Interface for ViewModels
 protocol CustomViewModel{
     
     associatedtype Input
